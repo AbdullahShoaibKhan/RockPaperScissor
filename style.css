@@ -1,0 +1,98 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+img:hover{
+    scale: 1.1;
+}
+body{
+    background-color: rgb(94, 15, 15);
+}
+button{
+    font-size: 35px;
+    background-color: rgba(131, 37, 37, 0.918);
+    color: white;
+    border: none;
+    padding:5px 25px;
+    align-content: center;
+}
+header{
+    font-size: 40px;
+}
+p{
+    font-size: 30px;
+}
+h2{
+    text-align: center;
+    color:white;
+}
+.startgame{
+    padding: 10px 60px;
+    font-size: 40px;
+    text-align: center;
+}
+#overlay button{
+    display: flex;
+    margin: auto;    
+}
+#overlayCmt{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    background-color: rgba(216, 18, 18, 0.596);
+    padding: 5px ;
+}
+#overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+    cursor: pointer;
+}
+.header{
+    text-align: center;
+    color: white;
+}
+.button{
+    border: 2px solid black;
+    margin: 0px 5px;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-evenly;   
+}
+.player-btn{
+    border: 2px solid black;
+    padding: 0px 10px;
+    background-color: rgba(207, 18, 18, 0.596);
+    align-content: center;
+
+}
+.computer-btn{
+    border: 2px solid black;
+    padding: 0px 10px;
+    background-color: rgba(216, 18, 18, 0.596);
+    box-shadow: rgb(235, 51, 18);
+}
+.computer-btn img{
+    scale: 1.1;
+    box-shadow: tomato;
+}
+#comment{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.score{
+    display:flex;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+}

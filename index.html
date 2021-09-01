@@ -3,107 +3,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
-    <header>Rock Paper Scissors</header>
-    <div>
-        <button  id="start" onclick=playerselection() class="startgame">start</button>
-    </div id="buttons">
-        <ul>
-        <button  id="rock" class="button">ROCK</button>
-        </ul>
+<body >
+    <div id="container">
+    <div class="header">
+        <header>Rock Paper Scissors</header>
+        <p>The first one to get to 5 points Wins</p>
+    </div>
+    <div class="startgame">
+        <button  id="start" >START</button>
+    </div>
+    <div id="overlay">
+        <div id="inOverlay">
+            <button onclick=off() class="startgame">START AGAIN</button>
+            <p id="overlayCmt"></p>
+        </div>
+    </div>
+    <div  class="btn-container">
+        
+        <div  class="player-btn">
+            <h2>Player</h2>
+                <img  id="rock" class="button" src="rock.jpeg">
+                <img  id="paper" class="button" src="paper.png">
             <ul>
-            <button  id="paper" class="button">PAPER</button>
+                <img  id="scissor" class="button" src="scissor.png">
             </ul>
-                <ul>
-                <button  id="scissor" class="button">SCISSOR</button>
-                </ul>
-    <div class="score" id="playerscr">0</div>
-    <div class="score" id="computerscr">0</div>
-
+        </div>
+        <div  class="computer-btn">
+            <h2>Computer</h2>
+                <img  id="rock" class="button" src="rock.jpeg">
+                <img  id="paper" class="button" src="paper.png">
+            <ul>
+                <img  id="scissor" class="button" src="scissor.png">
+            </ul>
+        </div>
+    </div>
+    <div id="comment">
+    </div>
+    <div class="score" id="playerscr">Player Score</div>
+    <div class="score" id="computerscr">Computer Score</div>
+</div>
 </body>
-    <script> 
-    
-            let playerscore=0;
-            let computerscore=0;
-    
-            playerSelection='';
-            computerSelection='';
-    
-            buttons=document.querySelectorAll('.button');
-    
-            let rock=document.querySelector('#rock');
-            let paper=document.querySelector('#paper');
-            let scissor=document.querySelector('#scissor');
-           
-        function playerselection(){
-           
-            rock.addEventListener('click',()=>{
-                playerSelection='rock';
-                computerselection();
-                    console.log(playerSelection);
-                    console.log('playerSelection');
-                    comparison(playerSelection,computerSelection);
-            })
-            paper.addEventListener('click',()=>{
-                playerSelection='paper';
-                computerselection();
-                    console.log(playerSelection);
-                    console.log('playerSelection');
-                    comparison(playerSelection,computerSelection);
-            })
-            scissor.addEventListener('click',()=>{
-                playerSelection='scissor';
-                computerselection();
-                    console.log(playerSelection);
-                    console.log('playerSelection');
-                    comparison(playerSelection,computerSelection);
-            })
-           
-        }
-           
-        
-        function computerselection(){
-            options=['rock','paper','scissor'];
-            computerSelection=options[~~(Math.random()*options.length)];
-                console.log(computerSelection);
-                console.log('Computer Selection');
-                   return computerSelection;
-        }
-        
-      
-     
-        function comparison(playerSelection,computerSelection){
-            if(computerSelection===playerSelection){
-                console.log('tie');
-            } else if (
-                playerSelection == "rock" && computerSelection=="scissor"||
-                playerSelection == "scissor" && computerSelection=="paper"||
-                playerSelection == "paper" && computerSelection=="rock" 
-                ){
-                console.log('WoN');
-                playerscore++;
-                document.getElementById('playerscr').innerText=playerscore;
-            
-                    return playerscore;
-            } else if (
-                playerSelection=== "scissor"&& computerSelection==="rock"||
-                playerSelection=== "paper"&& computerSelection==="scissor"||
-                playerSelection=== "rock"&& computerSelection==="paper"
-                ){
-                console.log('lost');
-                computerscore++;
-                document.getElementById('computerscr').innerText=computerscore;
-                
-                    return computerscore;
-            }
-            
-            }
-        function winner(playerscore,computerscore){
-            if (playerscore == 5){
-                console.log('player is winner');
-            } 
-        }    
-    </script>
+    <script src="script.js"></script>
 </html>
