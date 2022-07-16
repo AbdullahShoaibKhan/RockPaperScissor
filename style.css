@@ -1,26 +1,28 @@
 img{
     width: 100px;
     height: 100px;
-}
-img:hover{
-    scale: 1.1;
+    border-radius: 5px;
 }
 body{
-    background-color: rgb(94, 15, 15);
+    background:black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 button{
     font-size: 35px;
-    background-color: rgba(131, 37, 37, 0.918);
+    background-color: #0a6a27ea;
     color: white;
-    border: none;
+    border: 2px solid white;
+    border-radius: 20px;
     padding:5px 25px;
     align-content: center;
 }
 header{
     font-size: 40px;
+    font-weight: bold;
 }
 p{
     font-size: 30px;
+    
 }
 h2{
     text-align: center;
@@ -28,8 +30,11 @@ h2{
 }
 .startgame{
     padding: 10px 60px;
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
+}
+.startgame button:hover{
+    background-color:  #13ac41ea;
 }
 #overlay button{
     display: flex;
@@ -39,7 +44,7 @@ h2{
     text-align: center;
     font-size: 40px;
     color: white;
-    background-color: rgba(216, 18, 18, 0.596);
+    background-color: #0a6a27ea;
     padding: 5px ;
 }
 #overlay{
@@ -69,22 +74,23 @@ h2{
     justify-content: space-evenly;   
 }
 .player-btn{
-    border: 2px solid black;
+    border: 2px solid rgb(248, 248, 248);
     padding: 0px 10px;
-    background-color: rgba(207, 18, 18, 0.596);
+    background-color: #0a6a27ea;
     align-content: center;
-
+    border-radius: 5px;
+}
+.player-btn img:hover{
+    border: 2px solid white;
 }
 .computer-btn{
     border: 2px solid black;
     padding: 0px 10px;
-    background-color: rgba(216, 18, 18, 0.596);
+    background-color: #0a6a27ea;
     box-shadow: rgb(235, 51, 18);
+    border-radius: 5px;
 }
-.computer-btn img{
-    scale: 1.1;
-    box-shadow: tomato;
-}
+
 #comment{
     text-align: center;
     font-size: 25px;
@@ -95,4 +101,16 @@ h2{
     justify-content: center;
     color: white;
     font-size: 25px;
+}
+@media only screen and (max-width: 600px) {
+    .btn-container{
+       display: grid;
+    }
+    img{
+        width: 70px;
+        height: 60px;  
+    }
+    header{
+        font-size: 35px;
+    }
 }
